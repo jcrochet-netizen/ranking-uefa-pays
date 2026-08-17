@@ -1,0 +1,342 @@
+{
+ "season": "2026/27",
+ "clubs": [
+  {
+   "team": 8,
+   "name": "Liverpool",
+   "ref": "Liverpool",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UCL"
+  },
+  {
+   "team": 9,
+   "name": "Manchester City",
+   "ref": "Manchester City",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UCL"
+  },
+  {
+   "team": 19,
+   "name": "Arsenal",
+   "ref": "Arsenal",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UCL"
+  },
+  {
+   "team": 15,
+   "name": "Aston Villa",
+   "ref": "Aston Villa",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UCL"
+  },
+  {
+   "team": 14,
+   "name": "Manchester United",
+   "ref": "Manchester United",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UCL"
+  },
+  {
+   "team": 52,
+   "name": "AFC Bournemouth",
+   "ref": "AFC Bournemouth",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UEL"
+  },
+  {
+   "team": 3,
+   "name": "Sunderland",
+   "ref": "Sunderland AFC",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UEL"
+  },
+  {
+   "team": 51,
+   "name": "Crystal Palace",
+   "ref": "Crystal Palace",
+   "countryId": 462,
+   "assoc": 462,
+   "comp": "UEL"
+  },
+  {
+   "team": 2930,
+   "name": "Inter",
+   "ref": "Internazionale",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UCL"
+  },
+  {
+   "team": 37,
+   "name": "Roma",
+   "ref": "AS Roma",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UCL"
+  },
+  {
+   "team": 597,
+   "name": "Napoli",
+   "ref": "Napoli",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UCL"
+  },
+  {
+   "team": 268,
+   "name": "Como",
+   "ref": "Como 1907",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UCL"
+  },
+  {
+   "team": 625,
+   "name": "Juventus",
+   "ref": "Juventus",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UEL"
+  },
+  {
+   "team": 113,
+   "name": "AC Milan",
+   "ref": "AC Milan",
+   "countryId": 251,
+   "assoc": 251,
+   "comp": "UEL"
+  },
+  {
+   "team": 3468,
+   "name": "Real Madrid",
+   "ref": "Real Madrid",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UCL"
+  },
+  {
+   "team": 83,
+   "name": "FC Barcelona",
+   "ref": "FC Barcelona",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UCL"
+  },
+  {
+   "team": 7980,
+   "name": "Atlético de Madrid",
+   "ref": "Atlético Madrid",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UCL"
+  },
+  {
+   "team": 485,
+   "name": "Real Betis",
+   "ref": "Real Betis",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UCL"
+  },
+  {
+   "team": 3477,
+   "name": "Villarreal",
+   "ref": "Villarreal",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UCL"
+  },
+  {
+   "team": 594,
+   "name": "Real Sociedad",
+   "ref": "Real Sociedad",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UEL"
+  },
+  {
+   "team": 36,
+   "name": "Celta de Vigo",
+   "ref": "Celta de Vigo",
+   "countryId": 32,
+   "assoc": 32,
+   "comp": "UEL"
+  },
+  {
+   "team": 503,
+   "name": "FC Bayern München",
+   "ref": "Bayern München",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UCL"
+  },
+  {
+   "team": 68,
+   "name": "Borussia Dortmund",
+   "ref": "Borussia Dortmund",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UCL"
+  },
+  {
+   "team": 277,
+   "name": "RB Leipzig",
+   "ref": "RB Leipzig",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UCL"
+  },
+  {
+   "team": 3319,
+   "name": "VfB Stuttgart",
+   "ref": "VfB Stuttgart",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UCL"
+  },
+  {
+   "team": 3321,
+   "name": "Bayer 04 Leverkusen",
+   "ref": "Bayer Leverkusen",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UEL"
+  },
+  {
+   "team": 2726,
+   "name": "TSG Hoffenheim",
+   "ref": "1899 Hoffenheim",
+   "countryId": 11,
+   "assoc": 11,
+   "comp": "UEL"
+  },
+  {
+   "team": 591,
+   "name": "Paris Saint Germain",
+   "ref": "Paris Saint-Germain",
+   "countryId": 17,
+   "assoc": 17,
+   "comp": "UCL"
+  },
+  {
+   "team": 690,
+   "name": "LOSC Lille",
+   "ref": "Lille OSC",
+   "countryId": 17,
+   "assoc": 17,
+   "comp": "UCL"
+  },
+  {
+   "team": 271,
+   "name": "Lens",
+   "ref": "RC Lens",
+   "countryId": 17,
+   "assoc": 17,
+   "comp": "UCL"
+  },
+  {
+   "team": 44,
+   "name": "Olympique Marseille",
+   "ref": "Olympique Marseille",
+   "countryId": 17,
+   "assoc": 17,
+   "comp": "UEL"
+  },
+  {
+   "team": 598,
+   "name": "Rennes",
+   "ref": "Stade Rennais",
+   "countryId": 17,
+   "assoc": 17,
+   "comp": "UEL"
+  },
+  {
+   "team": 58,
+   "name": "Sporting CP",
+   "ref": "Sporting CP Lisbon",
+   "countryId": 20,
+   "assoc": 20,
+   "comp": "UCL"
+  },
+  {
+   "team": 652,
+   "name": "Porto",
+   "ref": "FC Porto",
+   "countryId": 20,
+   "assoc": 20,
+   "comp": "UCL"
+  },
+  {
+   "team": 7067,
+   "name": "Torreense",
+   "ref": "União Torreense",
+   "countryId": 20,
+   "assoc": 20,
+   "comp": "UEL"
+  },
+  {
+   "team": 340,
+   "name": "Club Brugge",
+   "ref": "Club Brugge",
+   "countryId": 556,
+   "assoc": 556,
+   "comp": "UCL"
+  },
+  {
+   "team": 682,
+   "name": "PSV",
+   "ref": "PSV Eindhoven",
+   "countryId": 38,
+   "assoc": 38,
+   "comp": "UCL"
+  },
+  {
+   "team": 73,
+   "name": "Feyenoord",
+   "ref": "Feyenoord",
+   "countryId": 38,
+   "assoc": 38,
+   "comp": "UCL"
+  },
+  {
+   "team": 34,
+   "name": "Galatasaray",
+   "ref": "Galatasaray",
+   "countryId": 404,
+   "assoc": 404,
+   "comp": "UCL"
+  },
+  {
+   "team": 621,
+   "name": "Shakhtar Donetsk",
+   "ref": "Shakhtar Donetsk",
+   "countryId": 86,
+   "assoc": 86,
+   "comp": "UCL"
+  },
+  {
+   "team": 216,
+   "name": "Slavia Praha",
+   "ref": "Slavia Praha",
+   "countryId": 245,
+   "assoc": 245,
+   "comp": "UCL"
+  },
+  {
+   "team": 61,
+   "name": "AZ",
+   "ref": "AZ Alkmaar",
+   "countryId": 38,
+   "assoc": 38,
+   "comp": "UEL"
+  }
+ ],
+ "note": "Clubs entrant directement en phase de ligue 2026/27, saisis à la main tant que le tirage n'est pas publié par Sportmonks. Ce fichier est ignoré automatiquement pour une compétition dès que Sportmonks expose ses 36 équipes de phase de ligue."
+}
