@@ -72,7 +72,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -103,7 +103,8 @@ thead th {
 thead th:first-child, thead th.assoc { text-align: left; }
 thead th.sortable { cursor: pointer; user-select: none; transition: color .15s; }
 thead th.sortable:hover { color: var(--text); }
-thead th .arrow { opacity: 0; font-size: 9px; margin-left: 3px; }
+thead th .arrow { opacity: .35; font-size: 9px; margin-left: 3px; }
+thead th.sortable:hover .arrow { opacity: .7; }
 thead th[data-active] { color: var(--accent); }
 thead th[data-active] .arrow { opacity: 1; }
 thead th.col-live { color: var(--live); }
@@ -133,7 +134,6 @@ td.assoc { text-align: left !important; }
   background: var(--surface-alt); flex-shrink: 0;
 }
 .who .nm { font-weight: 600; }
-.who .cd { font-size: 10.5px; font-weight: 700; color: var(--text-faint); letter-spacing: .04em; }
 .chev { color: var(--text-faint); font-size: 10px; transition: transform .18s; display: inline-block; }
 tr.open .chev { transform: rotate(90deg); color: var(--accent); }
 
@@ -141,22 +141,18 @@ td.season { color: var(--text-secondary); font-size: 13px; }
 td.season.live { color: var(--live); font-weight: 600; background: var(--live-dim); }
 th.col-live { background: var(--surface-alt); }
 
-/* L'intitulé « Total 5 saisons » se met sur deux lignes quand la colonne
-   se resserre, plutôt que d'élargir tout le tableau. */
 thead th.total { white-space: normal; line-height: 1.25; }
-td.total { font-weight: 800; font-size: 14.5px; position: relative; padding-right: 12px; }
-td.total .barwrap {
-  position: absolute; inset: 4px 6px 4px 6px; border-radius: 5px; overflow: hidden; z-index: 0;
+td.total {
+  font-weight: 800; font-size: 14.5px; padding-right: 10px;
+  background: var(--accent-dim);
 }
-td.total .bar { position: absolute; inset: 0 auto 0 0; background: var(--bar); border-radius: 5px; }
-td.total .v { position: relative; z-index: 1; }
 
 td.clubs { font-size: 12px; color: var(--text-secondary); }
 td.clubs .on { color: var(--accent); font-weight: 700; }
 
 /* ── Panneau de détail ───────────────────────────────────────────── */
 
-tr.detail > td { padding: 0; background: var(--bg); }
+tr.detail > td { padding: 0; background: var(--surface-alt); }
 .panel { padding: 12px 14px 15px; border-bottom: 1px solid var(--border); }
 .panel h3 {
   font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
@@ -197,8 +193,8 @@ tr.detail > td { padding: 0; background: var(--bg); }
 
 /* ── Pied ────────────────────────────────────────────────────────── */
 
-.foot { margin-top: 14px; font-size: 11.5px; color: var(--text-faint); line-height: 1.6; }
-.foot b { color: var(--text-secondary); font-weight: 600; }
+.foot { margin-top: 14px; font-size: 11.5px; color: var(--text); line-height: 1.6; }
+.foot b { color: var(--text); font-weight: 700; }
 .legend { display: flex; flex-wrap: wrap; gap: 13px; margin-bottom: 7px; }
 .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 5px; vertical-align: 0; }
 
@@ -213,7 +209,6 @@ tr.detail > td { padding: 0; background: var(--bg); }
   table { font-size: 13px; }
   tbody td, thead th { padding: 7px 3px; }
   td.assoc { min-width: 124px; }
-  .who .cd { display: none; }
 }
 @media (max-width: 660px) { .hideable-1 { display: none } }
 @media (max-width: 560px) { .hideable-2 { display: none } }
@@ -352,7 +347,7 @@ function valueOf(row, key) {
 function sorted() {
   return [...DATA.rows].sort((a, b) => {
     const x = valueOf(a, sortKey), y = valueOf(b, sortKey);
-    const c = typeof x === "string" ? x.localeCompare(y, "fr") * -1 : x - y;
+    const c = typeof x === "string" ? x.localeCompare(y, "fr") : x - y;
     return c * sortDir || a.rank - b.rank;
   });
 }
@@ -371,13 +366,18 @@ function renderHead() {
       th.tabIndex = 0;
       th.setAttribute("role", "button");
       if (sortKey === c.key) th.dataset.active = "1";
-      const a = document.createElement("span");
-      a.className = "arrow";
-      a.textContent = sortDir === -1 ? "▼" : "▲";
-      th.appendChild(a);
+      const active = sortKey === c.key;
+      const arrow = document.createElement("span");
+      arrow.className = "arrow";
+      arrow.textContent = active ? (sortDir === -1 ? "▼" : "▲") : "⇅";
+      th.appendChild(arrow);
+      th.title = c.key === "name"
+        ? (active && sortDir === 1 ? "Trier de Z à A" : "Trier de A à Z")
+        : (active && sortDir === -1 ? "Trier du plus petit au plus grand" : "Trier du plus grand au plus petit");
       const go = () => {
         if (sortKey === c.key) sortDir *= -1;
         else { sortKey = c.key; sortDir = c.key === "name" ? 1 : -1; }
+        openCode = null;
         render();
       };
       th.addEventListener("click", go);
@@ -422,7 +422,6 @@ function render() {
   const cols = columns();
   const tb = document.getElementById("tbody");
   const rows = sorted();
-  const max = Math.max(...DATA.rows.map((r) => r.total), 1);
   tb.innerHTML = "";
 
   if (!rows.length) {
@@ -446,15 +445,14 @@ function render() {
         html += `<td class="assoc${hide}"><div class="who">
           <span class="chev">▶</span>
           <img src="${row.flag}" alt="" loading="lazy" width="22" height="15">
-          <span><span class="nm">${esc(row.name)}</span> <span class="cd">${row.code}</span></span>
+          <span class="nm">${esc(row.name)}</span>
         </div></td>`;
       } else if (c.key.startsWith("s:")) {
         const s = c.key.slice(2);
         const live = s === DATA.liveSeason;
         html += `<td class="season${live ? " live" : ""}${hide}">${F3(row.coefs[s])}</td>`;
       } else if (c.key === "total") {
-        const pct = (row.total / max) * 100;
-        html += `<td class="total${hide}"><span class="barwrap"><span class="bar" style="width:${pct.toFixed(1)}%"></span></span><span class="v">${F3(row.total)}</span></td>`;
+        html += `<td class="total${hide}">${F3(row.total)}</td>`;
       } else {
         html += `<td class="clubs${hide}"><span class="on">${row.clubsAlive}</span>/${row.clubs}</td>`;
       }
@@ -502,9 +500,6 @@ function renderFoot() {
     `plus les bonus UEFA de classement en phase de ligue et de tour atteint à partir des huitièmes. ` +
     `Le total est divisé par le nombre de clubs engagés, puis tronqué à trois décimales. ` +
     `Les tirs au but ne rapportent aucun point, mais la qualification qu'ils procurent ouvre droit au bonus de tour.<br>` +
-    `<b>Colonne Clubs :</b> clubs encore en lice sur clubs engagés. Un club reste compté comme présent ` +
-    `jusqu'à son élimination — être reversé de la Ligue des champions vers la Ligue Europa, ou de la Ligue ` +
-    `Europa vers la Ligue Conference, n'est pas une élimination.<br>` +
     `<b>Données :</b> SportMonks. Les quatre saisons closes reprennent les coefficients définitifs de l'UEFA ; ` +
     `la saison ${FR(DATA.liveSeason)} est recalculée à chaque mise à jour. Cliquez sur une ligne pour le détail club par club. ` +
     `Données arrêtées au ${stamp}.`;
