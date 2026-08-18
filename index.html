@@ -325,7 +325,10 @@ function columns() {
       sortable: true,
     });
   }
-  cols.push({ key: "total", label: "Total 5 saisons", cls: "total", sortable: true });
+  // Libellé dérivé de la fenêtre en cours : « Total 22-27 » aujourd'hui,
+  // « Total 23-28 » l'an prochain, sans intervention.
+  const span = `${DATA.seasons[0].slice(2, 4)}-${DATA.liveSeason.slice(5)}`;
+  cols.push({ key: "total", label: `Total ${span}`, cls: "total", sortable: true });
   cols.push({
     key: "clubsAlive",
     label: "Clubs",
