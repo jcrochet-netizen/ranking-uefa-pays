@@ -74,54 +74,7 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-.widget { max-width: 1080px; margin: 0 auto; padding: 20px 14px 36px; }
-
-/* ── En-tête ─────────────────────────────────────────────────────── */
-
-.head { margin-bottom: 18px; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
-  color: var(--accent); background: var(--accent-dim);
-  padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
-}
-.eyebrow .dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
-@media (prefers-reduced-motion: reduce) { .eyebrow .dot { animation: none } }
-
-h1 { font-size: clamp(21px, 4.4vw, 30px); font-weight: 800; letter-spacing: -.02em; }
-.sub { color: var(--text-secondary); font-size: 14px; margin-top: 6px; max-width: 66ch; }
-.sub b { color: var(--text); font-weight: 600; }
-
-/* ── Barre d'outils ──────────────────────────────────────────────── */
-
-.tools {
-  display: flex; flex-wrap: wrap; gap: 9px; align-items: center;
-  margin: 16px 0 12px;
-}
-.search {
-  flex: 1 1 190px; min-width: 150px; position: relative;
-}
-.search input {
-  width: 100%; font: inherit; font-size: 14px;
-  color: var(--text); background: var(--surface); border: 1px solid var(--border);
-  border-radius: 9px; padding: 9px 12px 9px 33px; outline: none;
-  transition: border-color .15s, box-shadow .15s;
-}
-.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.search svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); opacity: .45; }
-
-.seg { display: flex; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 2px; }
-.seg button {
-  font: inherit; font-size: 12.5px; font-weight: 600; color: var(--text-secondary);
-  background: none; border: 0; border-radius: 7px; padding: 6px 11px; cursor: pointer;
-  transition: background .15s, color .15s; white-space: nowrap;
-}
-.seg button[aria-pressed="true"] { background: var(--accent-dim); color: var(--accent); }
-.seg button:hover:not([aria-pressed="true"]) { color: var(--text); }
+.widget { max-width: 1080px; margin: 0 auto; padding: 12px 14px 30px; }
 
 /* ── Tableau ─────────────────────────────────────────────────────── */
 
@@ -259,7 +212,7 @@ tr.detail > td { padding: 0; background: var(--bg); }
 /* Les cinq saisons tiennent de front dès ~620 px. En dessous, elles
    s'effacent une à une, la plus ancienne d'abord. */
 @media (max-width: 820px) {
-  .widget { padding: 16px 10px 30px; }
+  .widget { padding: 10px 10px 26px; }
   table { font-size: 13px; }
   tbody td, thead th { padding: 8px 6px; }
   td.assoc { min-width: 124px; }
@@ -303,23 +256,6 @@ tr.detail > td { padding: 0; background: var(--bg); }
 </head>
 <body>
 <div class="widget">
-  <div class="head">
-    <div class="eyebrow"><span class="dot"></span><span id="eyebrow">Saison en cours</span></div>
-    <h1 id="title">Classement UEFA par pays</h1>
-    <p class="sub" id="sub"></p>
-  </div>
-
-  <div class="tools">
-    <div class="search">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Rechercher un pays…" autocomplete="off" aria-label="Rechercher un pays">
-    </div>
-    <div class="seg" role="group" aria-label="Affichage">
-      <button id="btn-all" aria-pressed="true">Toutes les associations</button>
-      <button id="btn-top" aria-pressed="false">Top 20</button>
-    </div>
-  </div>
-
   <div class="card">
     <div class="scroll">
       <table>
@@ -350,7 +286,6 @@ let DATA = null;
 let sortKey = "total";
 let sortDir = -1;
 let openCode = null;
-let topOnly = false;
 
 /* Colonnes : les saisons closes sont masquées en premier sur petit écran,
    la plus ancienne d'abord. */
@@ -398,17 +333,14 @@ function valueOf(row, key) {
   return row[key] ?? 0;
 }
 
+// Le classement est toujours affiché en entier ; seul l'ordre des colonnes
+// peut changer, au clic sur un en-tête.
 function sorted() {
-  const rows = DATA.rows.filter((r) => {
-    const q = document.getElementById("q").value.trim().toLowerCase();
-    return !q || r.name.toLowerCase().includes(q) || r.code.toLowerCase().includes(q);
-  });
-  rows.sort((a, b) => {
+  return [...DATA.rows].sort((a, b) => {
     const x = valueOf(a, sortKey), y = valueOf(b, sortKey);
     const c = typeof x === "string" ? x.localeCompare(y, "fr") * -1 : x - y;
     return c * sortDir || a.rank - b.rank;
   });
-  return topOnly ? rows.filter((r) => r.rank <= 20) : rows;
 }
 
 function renderHead() {
@@ -545,15 +477,7 @@ function render() {
   }
 }
 
-function renderHeader() {
-  const first = DATA.seasons[0], last = DATA.liveSeason;
-  document.getElementById("eyebrow").textContent = `Saison ${FR(last)} en cours`;
-  document.getElementById("title").textContent = `Classement UEFA par pays ${DATA.rankingYear}`;
-  document.getElementById("sub").innerHTML =
-    `Performance des clubs de chaque association en Ligue des champions, Ligue Europa et Ligue Conference ` +
-    `sur cinq saisons, de <b>${FR(first)}</b> à <b>${FR(last)}</b>. Ce classement fixe le nombre de places ` +
-    `attribuées à chaque pays pour la saison <b>${FR(DATA.allocationSeason)}</b>.`;
-
+function renderFoot() {
   const d = new Date(DATA.updated);
   const stamp = d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) +
     " à " + d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
@@ -570,19 +494,9 @@ function renderHeader() {
     `Données arrêtées au ${stamp}.`;
 }
 
-document.getElementById("q").addEventListener("input", () => { openCode = null; render(); });
-document.getElementById("btn-all").addEventListener("click", () => setTop(false));
-document.getElementById("btn-top").addEventListener("click", () => setTop(true));
-function setTop(v) {
-  topOnly = v;
-  document.getElementById("btn-all").setAttribute("aria-pressed", String(!v));
-  document.getElementById("btn-top").setAttribute("aria-pressed", String(v));
-  render();
-}
-
 fetch("ranking.json", { cache: "no-store" })
   .then((r) => r.json())
-  .then((json) => { DATA = json; renderHeader(); render(); })
+  .then((json) => { DATA = json; renderFoot(); render(); })
   .catch(() => {
     document.getElementById("tbody").innerHTML =
       '<tr><td class="empty">Données indisponibles. Lancez <code>node fetch-data.js</code> pour générer ranking.json.</td></tr>';
