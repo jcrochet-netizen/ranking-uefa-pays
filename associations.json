@@ -4,384 +4,714 @@
   "name": "Angleterre",
   "iso": "gb-eng",
   "countryId": 462,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/en.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/en.png",
+  "names": {
+   "fr": "Angleterre",
+   "en": "England",
+   "it": "Inghilterra",
+   "pt": "Inglaterra"
+  }
  },
  {
   "code": "ITA",
   "name": "Italie",
   "iso": "it",
   "countryId": 251,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/it.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/it.png",
+  "names": {
+   "fr": "Italie",
+   "en": "Italy",
+   "it": "Italia",
+   "pt": "Itália"
+  }
  },
  {
   "code": "ESP",
   "name": "Espagne",
   "iso": "es",
   "countryId": 32,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/es.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/es.png",
+  "names": {
+   "fr": "Espagne",
+   "en": "Spain",
+   "it": "Spagna",
+   "pt": "Espanha"
+  }
  },
  {
   "code": "GER",
   "name": "Allemagne",
   "iso": "de",
   "countryId": 11,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/de.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/de.png",
+  "names": {
+   "fr": "Allemagne",
+   "en": "Germany",
+   "it": "Germania",
+   "pt": "Alemanha"
+  }
  },
  {
   "code": "FRA",
   "name": "France",
   "iso": "fr",
   "countryId": 17,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fr.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fr.png",
+  "names": {
+   "fr": "France",
+   "en": "France",
+   "it": "Francia",
+   "pt": "França"
+  }
  },
  {
   "code": "POR",
   "name": "Portugal",
   "iso": "pt",
   "countryId": 20,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/pt.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/pt.png",
+  "names": {
+   "fr": "Portugal",
+   "en": "Portugal",
+   "it": "Portogallo",
+   "pt": "Portugal"
+  }
  },
  {
   "code": "BEL",
   "name": "Belgique",
   "iso": "be",
   "countryId": 556,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/be.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/be.png",
+  "names": {
+   "fr": "Belgique",
+   "en": "Belgium",
+   "it": "Belgio",
+   "pt": "Bélgica"
+  }
  },
  {
   "code": "NED",
   "name": "Pays-Bas",
   "iso": "nl",
   "countryId": 38,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/nl.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/nl.png",
+  "names": {
+   "fr": "Pays-Bas",
+   "en": "Netherlands",
+   "it": "Paesi Bassi",
+   "pt": "Países Baixos"
+  }
  },
  {
   "code": "TUR",
   "name": "Turquie",
   "iso": "tr",
   "countryId": 404,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/tr.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/tr.png",
+  "names": {
+   "fr": "Turquie",
+   "en": "Türkiye",
+   "it": "Turchia",
+   "pt": "Turquia"
+  }
  },
  {
   "code": "POL",
   "name": "Pologne",
   "iso": "pl",
   "countryId": 2,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/pl.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/pl.png",
+  "names": {
+   "fr": "Pologne",
+   "en": "Poland",
+   "it": "Polonia",
+   "pt": "Polônia"
+  }
  },
  {
   "code": "CZE",
   "name": "Tchéquie",
   "iso": "cz",
   "countryId": 245,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/cz.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/cz.png",
+  "names": {
+   "fr": "Tchéquie",
+   "en": "Czechia",
+   "it": "Cechia",
+   "pt": "Tchéquia"
+  }
  },
  {
   "code": "GRE",
   "name": "Grèce",
   "iso": "gr",
   "countryId": 125,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/gr.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/gr.png",
+  "names": {
+   "fr": "Grèce",
+   "en": "Greece",
+   "it": "Grecia",
+   "pt": "Grécia"
+  }
  },
  {
   "code": "DEN",
   "name": "Danemark",
   "iso": "dk",
   "countryId": 320,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/dk.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/dk.png",
+  "names": {
+   "fr": "Danemark",
+   "en": "Denmark",
+   "it": "Danimarca",
+   "pt": "Dinamarca"
+  }
  },
  {
   "code": "NOR",
   "name": "Norvège",
   "iso": "no",
   "countryId": 1578,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/no.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/no.png",
+  "names": {
+   "fr": "Norvège",
+   "en": "Norway",
+   "it": "Norvegia",
+   "pt": "Noruega"
+  }
  },
  {
   "code": "CYP",
   "name": "Chypre",
   "iso": "cy",
   "countryId": 116,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/cy.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/cy.png",
+  "names": {
+   "fr": "Chypre",
+   "en": "Cyprus",
+   "it": "Cipro",
+   "pt": "Chipre"
+  }
  },
  {
   "code": "SUI",
   "name": "Suisse",
   "iso": "ch",
   "countryId": 62,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ch.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ch.png",
+  "names": {
+   "fr": "Suisse",
+   "en": "Switzerland",
+   "it": "Svizzera",
+   "pt": "Suíça"
+  }
  },
  {
   "code": "HUN",
   "name": "Hongrie",
   "iso": "hu",
   "countryId": 674,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/hu.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/hu.png",
+  "names": {
+   "fr": "Hongrie",
+   "en": "Hungary",
+   "it": "Ungheria",
+   "pt": "Hungria"
+  }
  },
  {
   "code": "SWE",
   "name": "Suède",
   "iso": "se",
   "countryId": 47,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/se.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/se.png",
+  "names": {
+   "fr": "Suède",
+   "en": "Sweden",
+   "it": "Svezia",
+   "pt": "Suécia"
+  }
  },
  {
   "code": "AUT",
   "name": "Autriche",
   "iso": "at",
   "countryId": 143,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/at.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/at.png",
+  "names": {
+   "fr": "Autriche",
+   "en": "Austria",
+   "it": "Austria",
+   "pt": "Áustria"
+  }
  },
  {
   "code": "SCO",
   "name": "Écosse",
   "iso": "gb-sct",
   "countryId": 1161,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sco.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sco.png",
+  "names": {
+   "fr": "Écosse",
+   "en": "Scotland",
+   "it": "Scozia",
+   "pt": "Escócia"
+  }
  },
  {
   "code": "CRO",
   "name": "Croatie",
   "iso": "hr",
   "countryId": 266,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/hr.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/hr.png",
+  "names": {
+   "fr": "Croatie",
+   "en": "Croatia",
+   "it": "Croazia",
+   "pt": "Croácia"
+  }
  },
  {
   "code": "ROU",
   "name": "Roumanie",
   "iso": "ro",
   "countryId": 155,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ro.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ro.png",
+  "names": {
+   "fr": "Roumanie",
+   "en": "Romania",
+   "it": "Romania",
+   "pt": "Romênia"
+  }
  },
  {
   "code": "UKR",
   "name": "Ukraine",
   "iso": "ua",
   "countryId": 86,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ua.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ua.png",
+  "names": {
+   "fr": "Ukraine",
+   "en": "Ukraine",
+   "it": "Ucraina",
+   "pt": "Ucrânia"
+  }
  },
  {
   "code": "ISR",
   "name": "Israël",
   "iso": "il",
   "countryId": 802,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/il.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/il.png",
+  "names": {
+   "fr": "Israël",
+   "en": "Israel",
+   "it": "Israele",
+   "pt": "Israel"
+  }
  },
  {
   "code": "SVN",
   "name": "Slovénie",
   "iso": "si",
   "countryId": 1638,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/si.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/si.png",
+  "names": {
+   "fr": "Slovénie",
+   "en": "Slovenia",
+   "it": "Slovenia",
+   "pt": "Eslovênia"
+  }
  },
  {
   "code": "AZE",
   "name": "Azerbaïdjan",
   "iso": "az",
   "countryId": 2453,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/az.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/az.png",
+  "names": {
+   "fr": "Azerbaïdjan",
+   "en": "Azerbaijan",
+   "it": "Azerbaigian",
+   "pt": "Azerbaijão"
+  }
  },
  {
   "code": "SVK",
   "name": "Slovaquie",
   "iso": "sk",
   "countryId": 401,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sk.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sk.png",
+  "names": {
+   "fr": "Slovaquie",
+   "en": "Slovakia",
+   "it": "Slovacchia",
+   "pt": "Eslováquia"
+  }
  },
  {
   "code": "BUL",
   "name": "Bulgarie",
   "iso": "bg",
   "countryId": 224,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/bg.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/bg.png",
+  "names": {
+   "fr": "Bulgarie",
+   "en": "Bulgaria",
+   "it": "Bulgaria",
+   "pt": "Bulgária"
+  }
  },
  {
   "code": "SRB",
   "name": "Serbie",
   "iso": "rs",
   "countryId": 296,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/rs.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/rs.png",
+  "names": {
+   "fr": "Serbie",
+   "en": "Serbia",
+   "it": "Serbia",
+   "pt": "Sérvia"
+  }
  },
  {
   "code": "RUS",
   "name": "Russie",
   "iso": "ru",
   "countryId": null,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ru.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ru.png",
+  "names": {
+   "fr": "Russie",
+   "en": "Russia",
+   "it": "Russia",
+   "pt": "Rússia"
+  }
  },
  {
   "code": "ISL",
   "name": "Islande",
   "iso": "is",
   "countryId": 1796,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/is.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/is.png",
+  "names": {
+   "fr": "Islande",
+   "en": "Iceland",
+   "it": "Islanda",
+   "pt": "Islândia"
+  }
  },
  {
   "code": "IRL",
   "name": "Rép. d'Irlande",
   "iso": "ie",
   "countryId": 455,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ie.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ie.png",
+  "names": {
+   "fr": "Rép. d'Irlande",
+   "en": "Rep. of Ireland",
+   "it": "Rep. d'Irlanda",
+   "pt": "Rep. da Irlanda"
+  }
  },
  {
   "code": "ARM",
   "name": "Arménie",
   "iso": "am",
   "countryId": 919,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/am.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/am.png",
+  "names": {
+   "fr": "Arménie",
+   "en": "Armenia",
+   "it": "Armenia",
+   "pt": "Armênia"
+  }
  },
  {
   "code": "KOS",
   "name": "Kosovo",
   "iso": "xk",
   "countryId": 122,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/xk.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/xk.png",
+  "names": {
+   "fr": "Kosovo",
+   "en": "Kosovo",
+   "it": "Kosovo",
+   "pt": "Kosovo"
+  }
  },
  {
   "code": "LVA",
   "name": "Lettonie",
   "iso": "lv",
   "countryId": 748,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lv.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lv.png",
+  "names": {
+   "fr": "Lettonie",
+   "en": "Latvia",
+   "it": "Lettonia",
+   "pt": "Letônia"
+  }
  },
  {
   "code": "BIH",
   "name": "Bosnie-Herz.",
   "iso": "ba",
   "countryId": 507,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ba.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ba.png",
+  "names": {
+   "fr": "Bosnie-Herz.",
+   "en": "Bosnia-Herz.",
+   "it": "Bosnia-Erz.",
+   "pt": "Bósnia-Herz."
+  }
  },
  {
   "code": "FIN",
   "name": "Finlande",
   "iso": "fi",
   "countryId": 1233,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fi.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fi.png",
+  "names": {
+   "fr": "Finlande",
+   "en": "Finland",
+   "it": "Finlandia",
+   "pt": "Finlândia"
+  }
  },
  {
   "code": "KAZ",
   "name": "Kazakhstan",
   "iso": "kz",
   "countryId": 2427,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/kz.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/kz.png",
+  "names": {
+   "fr": "Kazakhstan",
+   "en": "Kazakhstan",
+   "it": "Kazakistan",
+   "pt": "Cazaquistão"
+  }
  },
  {
   "code": "LIE",
   "name": "Liechtenstein",
   "iso": "li",
   "countryId": 21795,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/li.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/li.png",
+  "names": {
+   "fr": "Liechtenstein",
+   "en": "Liechtenstein",
+   "it": "Liechtenstein",
+   "pt": "Liechtenstein"
+  }
  },
  {
   "code": "MDA",
   "name": "Moldavie",
   "iso": "md",
   "countryId": 2345,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/md.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/md.png",
+  "names": {
+   "fr": "Moldavie",
+   "en": "Moldova",
+   "it": "Moldavia",
+   "pt": "Moldávia"
+  }
  },
  {
   "code": "FRO",
   "name": "Îles Féroé",
   "iso": "fo",
   "countryId": 2154,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fo.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/fo.png",
+  "names": {
+   "fr": "Îles Féroé",
+   "en": "Faroe Islands",
+   "it": "Isole Fær Øer",
+   "pt": "Ilhas Faroé"
+  }
  },
  {
   "code": "MKD",
   "name": "Macédoine d.N.",
   "iso": "mk",
   "countryId": 57142,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/mk.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/mk.png",
+  "names": {
+   "fr": "Macédoine d.N.",
+   "en": "N. Macedonia",
+   "it": "Macedonia d.N.",
+   "pt": "Macedônia d.N."
+  }
  },
  {
   "code": "ALB",
   "name": "Albanie",
   "iso": "al",
   "countryId": 2454,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/al.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/al.png",
+  "names": {
+   "fr": "Albanie",
+   "en": "Albania",
+   "it": "Albania",
+   "pt": "Albânia"
+  }
  },
  {
   "code": "BLR",
   "name": "Biélorussie",
   "iso": "by",
   "countryId": 212,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/by.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/by.png",
+  "names": {
+   "fr": "Biélorussie",
+   "en": "Belarus",
+   "it": "Bielorussia",
+   "pt": "Bielorrússia"
+  }
  },
  {
   "code": "LTU",
   "name": "Lituanie",
   "iso": "lt",
   "countryId": 2079,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lt.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lt.png",
+  "names": {
+   "fr": "Lituanie",
+   "en": "Lithuania",
+   "it": "Lituania",
+   "pt": "Lituânia"
+  }
  },
  {
   "code": "MLT",
   "name": "Malte",
   "iso": "mt",
   "countryId": 2756,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/mt.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/mt.png",
+  "names": {
+   "fr": "Malte",
+   "en": "Malta",
+   "it": "Malta",
+   "pt": "Malta"
+  }
  },
  {
   "code": "AND",
   "name": "Andorre",
   "iso": "ad",
   "countryId": 2931,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ad.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ad.png",
+  "names": {
+   "fr": "Andorre",
+   "en": "Andorra",
+   "it": "Andorra",
+   "pt": "Andorra"
+  }
  },
  {
   "code": "EST",
   "name": "Estonie",
   "iso": "ee",
   "countryId": 2405,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ee.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ee.png",
+  "names": {
+   "fr": "Estonie",
+   "en": "Estonia",
+   "it": "Estonia",
+   "pt": "Estônia"
+  }
  },
  {
   "code": "GIB",
   "name": "Gibraltar",
   "iso": "gi",
   "countryId": 3374,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/gi.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/gi.png",
+  "names": {
+   "fr": "Gibraltar",
+   "en": "Gibraltar",
+   "it": "Gibilterra",
+   "pt": "Gibraltar"
+  }
  },
  {
   "code": "GEO",
   "name": "Géorgie",
   "iso": "ge",
   "countryId": 119,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ge.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/ge.png",
+  "names": {
+   "fr": "Géorgie",
+   "en": "Georgia",
+   "it": "Georgia",
+   "pt": "Geórgia"
+  }
  },
  {
   "code": "NIR",
   "name": "Irlande du Nord",
   "iso": "gb-nir",
   "countryId": 491,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/nd.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/nd.png",
+  "names": {
+   "fr": "Irlande du Nord",
+   "en": "N. Ireland",
+   "it": "Irlanda del Nord",
+   "pt": "Irlanda do Norte"
+  }
  },
  {
   "code": "LUX",
   "name": "Luxembourg",
   "iso": "lu",
   "countryId": 3126,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lu.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/lu.png",
+  "names": {
+   "fr": "Luxembourg",
+   "en": "Luxembourg",
+   "it": "Lussemburgo",
+   "pt": "Luxemburgo"
+  }
  },
  {
   "code": "MNE",
   "name": "Monténégro",
   "iso": "me",
   "countryId": 998,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/me.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/me.png",
+  "names": {
+   "fr": "Monténégro",
+   "en": "Montenegro",
+   "it": "Montenegro",
+   "pt": "Montenegro"
+  }
  },
  {
   "code": "WAL",
   "name": "Pays de Galles",
   "iso": "gb-wls",
   "countryId": 515,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/wa.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/wa.png",
+  "names": {
+   "fr": "Pays de Galles",
+   "en": "Wales",
+   "it": "Galles",
+   "pt": "País de Gales"
+  }
  },
  {
   "code": "SMR",
   "name": "Saint-Marin",
   "iso": "sm",
   "countryId": 3347,
-  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sm.png"
+  "flag": "https://cdn.sportmonks.com/images/countries/png/short/sm.png",
+  "names": {
+   "fr": "Saint-Marin",
+   "en": "San Marino",
+   "it": "San Marino",
+   "pt": "San Marino"
+  }
  }
 ]

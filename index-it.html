@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
      l'URL nue d'etre indexee, pour qu'elle ne concurrence pas l'article qui
      la porte. `follow` laisse tout de meme circuler le jus des liens. -->
 <meta name="robots" content="noindex, follow">
-<meta name="description" content="Classement UEFA des associations sur cinq saisons, calcule depuis les resultats des clubs en Ligue des champions, Ligue Europa et Ligue Conference.">
-<title>Classement UEFA par pays</title>
+<meta name="description" content="Ranking UEFA delle federazioni su cinque stagioni, calcolato dai risultati dei club in Champions League, Europa League e Conference League.">
+<title>Ranking UEFA per nazione</title>
 <style>
 :root {
   --bg: #0c1520;
@@ -273,17 +273,17 @@ tr.detail > td { padding: 0; background: var(--surface-alt); }
 
   <div class="foot">
     <div class="legend">
-      <span><i style="background:rgba(255,215,0,.5)"></i>1<sup>er</sup></span>
+      <span><i style="background:rgba(255,215,0,.5)"></i>1<sup>a</sup></span>
       <span><i style="background:var(--accent)"></i>Top 5</span>
-      <span><i style="background:var(--live)"></i>Saison en cours, recalculée en direct</span>
+      <span><i style="background:var(--live)"></i>Stagione in corso, ricalcolata in tempo reale</span>
     </div>
     <div id="method"></div>
   </div>
 </div>
 
 <script>
-const LANG = "fr";
-const LOCALE = "fr-FR";
+const LANG = "it";
+const LOCALE = "it-IT";
 const nameOf = (row) => (row.names && row.names[LANG]) || row.name;
 
 const F3 = (v) => (v || 0).toFixed(3);
@@ -310,7 +310,7 @@ function columns() {
 
   const cols = [
     { key: "rank", label: "#", cls: "rk", sortable: false },
-    { key: "name", label: "Association", cls: "assoc", sortable: true },
+    { key: "name", label: "Federazione", cls: "assoc", sortable: true },
   ];
   for (const s of DATA.seasons) {
     const live = s === DATA.liveSeason;
@@ -327,14 +327,14 @@ function columns() {
   // Libellé dérivé de la fenêtre en cours : « Total 22-27 » aujourd'hui,
   // « Total 23-28 » l'an prochain, sans intervention.
   const span = `${DATA.seasons[0].slice(2, 4)}-${DATA.liveSeason.slice(5)}`;
-  cols.push({ key: "total", label: `Total ${span}`, cls: "total", sortable: true });
+  cols.push({ key: "total", label: `Totale ${span}`, cls: "total", sortable: true });
   cols.push({
     key: "clubsAlive",
-    label: "Clubs",
+    label: "Club",
     cls: "clubs",
     thCls: "hideable-4",
     hide: "hideable-4",
-    title: "Clubs encore en lice sur clubs engagés",
+    title: "Club ancora in corsa sui club iscritti",
     sortable: true,
   });
   return cols;
@@ -376,8 +376,8 @@ function renderHead() {
       arrow.textContent = active ? (sortDir === -1 ? "▼" : "▲") : "⇅";
       th.appendChild(arrow);
       th.title = c.key === "name"
-        ? (active && sortDir === 1 ? "Trier de Z à A" : "Trier de A à Z")
-        : (active && sortDir === -1 ? "Trier du plus petit au plus grand" : "Trier du plus grand au plus petit");
+        ? (active && sortDir === 1 ? "Ordina dalla Z alla A" : "Ordina dalla A alla Z")
+        : (active && sortDir === -1 ? "Ordina dal più piccolo al più grande" : "Ordina dal più grande al più piccolo");
       const go = () => {
         if (sortKey === c.key) sortDir *= -1;
         else { sortKey = c.key; sortDir = c.key === "name" ? 1 : -1; }
@@ -392,7 +392,7 @@ function renderHead() {
 }
 
 function clubRows(row) {
-  if (!row.detail.length) return '<tr><td colspan="5" class="waiting">Aucun club engagé cette saison.</td></tr>';
+  if (!row.detail.length) return '<tr><td colspan="5" class="waiting">Nessun club iscritto in questa stagione.</td></tr>';
   return row.detail
     .map((c) => {
       const notStarted = c.played === 0;
@@ -401,14 +401,14 @@ function clubRows(row) {
       // Sur mobile seules les colonnes Club et Total restent : le reste est
       // rappelé en petit sous le nom du club.
       const meta = notStarted
-        ? "encore qualifié"
+        ? "ancora in corsa"
         : `${c.played} match${c.played > 1 ? "es" : ""} · ${mpts} pt${Number(mpts) > 1 ? "s" : ""}` +
           (c.bonus ? ` · bonus ${bonus}` : "");
       return `<tr${c.alive ? "" : ' class="out"'}>
         <td>${esc(c.name)}${c.comp ? `<span class="tag ${c.comp.split("+")[0]}">${c.comp}</span>` : ""}${
-        c.alive ? "" : '<span class="tag out">éliminé</span>'
+        c.alive ? "" : '<span class="tag out">eliminato</span>'
       }<span class="c-meta">${meta}</span></td>
-        <td class="c-matches">${notStarted ? '<span class="waiting">encore qualifié</span>' : c.played}</td>
+        <td class="c-matches">${notStarted ? '<span class="waiting">ancora in corsa</span>' : c.played}</td>
         <td class="c-mpts">${mpts}</td>
         <td class="c-bonus">${bonus}</td>
         <td class="cpts">${F3(c.pts).replace(/\.?0+$/, "") || "0"}</td>
@@ -429,7 +429,7 @@ function render() {
   tb.innerHTML = "";
 
   if (!rows.length) {
-    tb.innerHTML = `<tr><td colspan="${cols.length}" class="empty">Aucune association ne correspond à cette recherche.</td></tr>`;
+    tb.innerHTML = `<tr><td colspan="${cols.length}" class="empty">Nessuna federazione corrisponde alla ricerca.</td></tr>`;
     return;
   }
 
@@ -477,15 +477,15 @@ function render() {
       const live = row.coefs[DATA.liveSeason] || 0;
       const pts = row.detail.reduce((s, c) => s + c.pts, 0);
       d.innerHTML = `<td colspan="${cols.length}"><div class="panel">
-        <h3>Détail <span>${FR(DATA.liveSeason)}</span> — ${esc(nameOf(row))}</h3>
+        <h3>Dettaglio <span>${FR(DATA.liveSeason)}</span> — ${esc(nameOf(row))}</h3>
         <table class="clubtable">
-          <thead><tr><th>Club</th><th class="c-matches">Matches</th><th class="c-mpts">Pts matches</th><th class="c-bonus">Bonus</th><th>Total</th></tr></thead>
+          <thead><tr><th>Club</th><th class="c-matches">Partite</th><th class="c-mpts">Punti partite</th><th class="c-bonus">Bonus</th><th>Totale</th></tr></thead>
           <tbody>${clubRows(row)}</tbody>
         </table>
         <div class="sumline">
-          <span>Total des points : <b>${F3(pts).replace(/\.?0+$/, "") || "0"}</b></span>
-          <span>Clubs engagés : <b>${row.clubs}</b></span>
-          <span>Coefficient ${FR(DATA.liveSeason)} : <b>${F3(live)}</b></span>
+          <span>Punti totali: <b>${F3(pts).replace(/\.?0+$/, "") || "0"}</b></span>
+          <span>Club iscritti: <b>${row.clubs}</b></span>
+          <span>Coefficiente ${FR(DATA.liveSeason)}: <b>${F3(live)}</b></span>
         </div>
       </div></td>`;
       tb.appendChild(d);
@@ -498,15 +498,15 @@ function render() {
 function renderFoot() {
   const d = new Date(DATA.updated);
   const stamp = d.toLocaleDateString(LOCALE, { day: "numeric", month: "long", year: "numeric" }) +
-    " à " + d.toLocaleTimeString(LOCALE, { hour: "2-digit", minute: "2-digit" });
+    " alle " + d.toLocaleTimeString(LOCALE, { hour: "2-digit", minute: "2-digit" });
   document.getElementById("method").innerHTML =
-    `<b>Calcul :</b> 2 points par victoire et 1 par match nul (moitié en phase de qualification et en barrages d'été), ` +
-    `plus les bonus UEFA de classement en phase de ligue et de tour atteint à partir des huitièmes. ` +
-    `Le total est divisé par le nombre de clubs engagés, puis tronqué à trois décimales. ` +
-    `Les tirs au but ne rapportent aucun point, mais la qualification qu'ils procurent ouvre droit au bonus de tour.<br>` +
-    `<b>Données :</b> SportMonks. Les quatre saisons closes reprennent les coefficients définitifs de l'UEFA ; ` +
-    `la saison ${FR(DATA.liveSeason)} est recalculée à chaque mise à jour. Cliquez sur une ligne pour le détail club par club. ` +
-    `Données arrêtées au ${stamp}.`;
+    `<b>Come si calcola:</b> 2 punti per vittoria e 1 per pareggio (dimezzati nei turni preliminari e negli spareggi estivi), ` +
+    `più i bonus UEFA per la posizione nella fase campionato e per ogni turno raggiunto dagli ottavi in poi. ` +
+    `Il totale è diviso per il numero di club iscritti, poi troncato a tre decimali. ` +
+    `I calci di rigore non assegnano punti, ma la qualificazione che producono dà diritto al bonus di turno.<br>` +
+    `<b>Dati:</b> SportMonks. Le quattro stagioni concluse riprendono i coefficienti definitivi UEFA; ` +
+    `la stagione ${FR(DATA.liveSeason)} è ricalcolata a ogni aggiornamento. Clicca su una riga per il dettaglio club per club. ` +
+    `Dati aggiornati al ${stamp}.`;
 }
 
 /* ── Intégration en iframe ───────────────────────────────────────────
@@ -555,7 +555,7 @@ fetch("ranking.json", { cache: "no-store" })
   .then((json) => { DATA = json; renderFoot(); render(); })
   .catch(() => {
     document.getElementById("tbody").innerHTML =
-      '<tr><td class="empty">Données indisponibles. Lancez <code>node fetch-data.js</code> pour générer ranking.json.</td></tr>';
+      '<tr><td class="empty">Dati non disponibili. Esegui <code>node fetch-data.js</code> per generare ranking.json.</td></tr>';
   });
 </script>
 </body>

@@ -507,6 +507,9 @@ function aggregate(clubs) {
     return {
       code: a.code,
       name: a.name,
+      // Nom de l'association dans les quatre langues : chaque variante du
+      // widget pioche la sienne dans le meme ranking.json.
+      names: a.names || { fr: a.name },
       iso: a.iso,
       flag: a.flag,
       coefs,

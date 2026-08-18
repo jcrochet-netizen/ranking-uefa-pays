@@ -22,6 +22,8 @@ node serve.js           # http://localhost:8777
 | `history.json` | Coefficients UEFA définitifs des quatre saisons closes |
 | `entrants-current.json` | Clubs entrant directement en phase de ligue, en attente du tirage |
 | `embed-wordpress.html` | Bloc d'integration a coller dans un article WordPress |
+| `index-en.html`, `index-it.html`, `index-pt.html` | Variantes anglaise, italienne et portugais-bresilien, generees |
+| `build-langs.js` | Genere les variantes traduites depuis le master FR |
 | `serve.js` | Serveur statique local |
 
 ## Méthodologie
@@ -163,6 +165,33 @@ Deux paramètres d'URL :
 | `?theme=light` | force l'apparence claire |
 | `?theme=dark` | force l'apparence sombre |
 | *(aucun)* | suit les préférences d'affichage du visiteur |
+
+## Langues
+
+Quatre variantes, toutes alimentées par le même `ranking.json` :
+
+| Langue | Fichier | URL |
+|---|---|---|
+| Français | `index.html` | `/ranking-uefa-pays/` |
+| Anglais | `index-en.html` | `/ranking-uefa-pays/index-en.html` |
+| Italien | `index-it.html` | `/ranking-uefa-pays/index-it.html` |
+| Portugais (BR) | `index-pt.html` | `/ranking-uefa-pays/index-pt.html` |
+
+Le français est le master : les trois autres sont **générées**, jamais éditées
+à la main.
+
+```bash
+node build-langs.js   # à relancer après toute modification de index.html
+```
+
+Seule l'interface est traduite dans `build-langs.js`. Les noms d'associations
+viennent de `ranking.json`, qui les porte dans les quatre langues (champ
+`names`, alimenté par `associations.json`). Les dates suivent la locale de
+chaque variante.
+
+Si le master change et qu'un motif de traduction ne s'y retrouve plus,
+`build-langs.js` le signale et sort en erreur plutôt que de produire une
+variante partiellement traduite.
 
 ## Passage à la saison suivante
 
