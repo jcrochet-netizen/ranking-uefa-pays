@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Page destinee a etre embarquee en iframe dans un article : on empeche
+     l'URL nue d'etre indexee, pour qu'elle ne concurrence pas l'article qui
+     la porte. `follow` laisse tout de meme circuler le jus des liens. -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Classement UEFA des associations sur cinq saisons, calcule depuis les resultats des clubs en Ligue des champions, Ligue Europa et Ligue Conference.">
 <title>Classement UEFA par pays</title>
 <style>
 :root {
@@ -236,7 +241,21 @@ tr.detail > td { padding: 0; background: var(--bg); }
   .rk { width: 34px }
   .rk .n { min-width: 20px; height: 20px; font-size: 12px }
 }
-@media (max-width: 420px) { .hideable-4 { display: none } }
+@media (max-width: 420px) {
+  .hideable-4 { display: none }
+  /* Marge de manoeuvre supplementaire sur les tres petits ecrans, pour que le
+     total reste entier plutot que rogne. */
+  table { font-size: 12.5px; }
+  td.total { font-size: 13px; padding-right: 7px; }
+  .rk { width: 30px }
+  .rk .n { min-width: 18px; height: 18px; font-size: 11px }
+}
+
+/* Embarque en iframe, la largeur utile est celle de la colonne de l'article,
+   deja marginee : le widget n'ajoute donc pas la sienne sur petit ecran. */
+@media (max-width: 560px) {
+  .embedded .widget { padding-left: 0; padding-right: 0; }
+}
 
 /* Tableau de détail : sur mobile on ne garde que le club et son total, les
    chiffres intermédiaires passent en sous-titre. */
@@ -475,6 +494,8 @@ function render() {
       tb.appendChild(d);
     }
   }
+
+  if (window.parent !== window) postHeight();
 }
 
 function renderFoot() {
@@ -492,6 +513,47 @@ function renderFoot() {
     `<b>Données :</b> SportMonks. Les quatre saisons closes reprennent les coefficients définitifs de l'UEFA ; ` +
     `la saison ${FR(DATA.liveSeason)} est recalculée à chaque mise à jour. Cliquez sur une ligne pour le détail club par club. ` +
     `Données arrêtées au ${stamp}.`;
+}
+
+/* ── Intégration en iframe ───────────────────────────────────────────
+ * `?theme=light` ou `?theme=dark` force l'apparence, pour s'accorder à
+ * l'article hôte plutôt que de suivre les préférences du visiteur.
+ */
+if (window.parent !== window) document.documentElement.classList.add("embedded");
+
+const forcedTheme = new URLSearchParams(location.search).get("theme");
+if (forcedTheme === "light" || forcedTheme === "dark") {
+  document.documentElement.setAttribute("data-theme", forcedTheme);
+}
+
+/* La page parente ne peut pas mesurer le contenu d'une iframe : on lui
+ * envoie la hauteur à chaque changement, pour qu'elle ajuste le cadre et
+ * qu'il n'y ait ni barre de défilement imbriquée ni tableau tronqué. */
+let lastHeight = 0;
+function postHeight() {
+  // On mesure le conteneur du widget, et non l'élément racine : la hauteur de
+  // ce dernier suit celle du cadre, si bien que la valeur initiale ferait
+  // plancher et que le cadre ne pourrait plus se resserrer.
+  if (!DATA) return; // avant les données le widget est vide : hauteur non représentative
+  const box = document.querySelector(".widget");
+  const h = Math.ceil(box ? box.getBoundingClientRect().height : document.body.scrollHeight);
+  if (!h || Math.abs(h - lastHeight) < 2) return;
+  lastHeight = h;
+  parent.postMessage({ type: "uefa-ranking:height", height: h }, "*");
+}
+if (window.parent !== window) {
+  // Trois filets : l'observateur de taille, un contrôle périodique, et le
+  // redimensionnement de la fenêtre. Le premier suffit dans un navigateur
+  // classique, mais il reste muet quand le cadre est mis en veille par le
+  // navigateur — d'où le contrôle périodique, qui, lui, aboutit toujours.
+  try {
+    new ResizeObserver(postHeight).observe(document.querySelector(".widget") || document.body);
+  } catch {
+    /* navigateur sans ResizeObserver : le contrôle périodique prend le relais */
+  }
+  window.addEventListener("load", postHeight);
+  window.addEventListener("resize", postHeight);
+  setInterval(postHeight, 500);
 }
 
 fetch("ranking.json", { cache: "no-store" })

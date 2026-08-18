@@ -1,0 +1,80 @@
+<!--
+  Classement UEFA par pays — bloc d'intégration WordPress
+  ----------------------------------------------------------------------
+  À coller dans un bloc « HTML personnalisé » (Gutenberg) ou dans l'éditeur
+  de code de l'article. Aucune dépendance, aucun plugin.
+
+  Le texte hors iframe est volontairement du vrai contenu HTML : ce qui se
+  trouve dans une iframe n'est pas attribué à la page qui l'affiche, il faut
+  donc que l'article porte lui-même de quoi être compris et indexé.
+
+  Le thème est forcé en clair (?theme=light). Retirer le paramètre pour que
+  le widget suive les préférences d'affichage du visiteur, ou passer
+  ?theme=dark pour un article sur fond sombre.
+-->
+
+<section class="uefa-ranking">
+  <h2>Classement UEFA des pays : le coefficient de chaque association</h2>
+
+  <p>
+    Le coefficient d'une association est la moyenne des points marqués par ses
+    clubs en Ligue des champions, Ligue Europa et Ligue Conference, sur les cinq
+    dernières saisons. Il détermine le nombre de places européennes attribuées à
+    chaque pays. L'Angleterre domine le classement 2027 devant l'Italie et
+    l'Espagne, la France restant au cinquième rang.
+  </p>
+
+  <figure class="uefa-ranking__embed">
+    <iframe
+      id="uefa-ranking-frame"
+      src="https://jcrochet-netizen.github.io/ranking-uefa-pays/?theme=light"
+      title="Classement UEFA des pays 2027 : coefficient de chaque association sur cinq saisons"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      scrolling="no"
+      style="display:block;width:100%;height:2600px;border:0;overflow:hidden"></iframe>
+
+    <figcaption>
+      Classement UEFA par pays, saisons 2022-23 à 2026-27. Il fixe les quotas de
+      la saison 2028-29. Données SportMonks, mises à jour automatiquement.
+    </figcaption>
+  </figure>
+
+  <noscript>
+    <p>
+      <a href="https://jcrochet-netizen.github.io/ranking-uefa-pays/"
+         target="_blank" rel="noopener">Consulter le classement UEFA par pays</a>
+      (l'affichage interactif nécessite JavaScript).
+    </p>
+  </noscript>
+</section>
+
+<style>
+/* Le cadre est réservé à sa hauteur estimée avant chargement : sans cela le
+   contenu qui suit sauterait à l'arrivée du widget (Cumulative Layout Shift). */
+.uefa-ranking__embed { margin: 1.5rem 0; }
+.uefa-ranking__embed figcaption {
+  margin-top: .6rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+</style>
+
+<script>
+(function () {
+  // Le widget envoie sa hauteur à chaque changement (ouverture d'une ligne,
+  // rotation de l'écran). On ajuste le cadre pour éviter une seconde barre de
+  // défilement à l'intérieur de l'article et un tableau tronqué.
+  var ORIGIN = "https://jcrochet-netizen.github.io";
+  window.addEventListener("message", function (event) {
+    if (event.origin !== ORIGIN) return;                 // n'écouter que notre widget
+    var data = event.data;
+    if (!data || data.type !== "uefa-ranking:height") return;
+    var height = parseInt(data.height, 10);
+    if (!height || height < 200 || height > 20000) return;
+    var frame = document.getElementById("uefa-ranking-frame");
+    if (frame) frame.style.height = height + "px";
+  });
+})();
+</script>

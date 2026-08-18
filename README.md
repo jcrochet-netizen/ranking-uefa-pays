@@ -21,6 +21,7 @@ node serve.js           # http://localhost:8777
 | `associations.json` | Les 55 associations : code UEFA, nom français, drapeau, `country_id` SportMonks |
 | `history.json` | Coefficients UEFA définitifs des quatre saisons closes |
 | `entrants-current.json` | Clubs entrant directement en phase de ligue, en attente du tirage |
+| `embed-wordpress.html` | Bloc d'integration a coller dans un article WordPress |
 | `serve.js` | Serveur statique local |
 
 ## Méthodologie
@@ -132,6 +133,36 @@ clubs qui entrent directement à ce stade, alors que l'UEFA les compte déjà au
 dénominateur. `entrants-current.json` les fournit en attendant ; le fichier est
 ignoré automatiquement, compétition par compétition, dès que le tirage apparaît
 dans l'API. À rafraîchir une fois par an, en juillet.
+
+## Intégration WordPress
+
+Le bloc prêt à coller se trouve dans [`embed-wordpress.html`](embed-wordpress.html) :
+un bloc « HTML personnalisé » suffit, sans plugin ni dépendance.
+
+Ce qui est prévu pour le référencement :
+
+- La page embarquée porte `noindex, follow`. Sans cela l'URL nue du widget
+  entrerait en concurrence avec l'article qui l'affiche, pour le même contenu.
+- Le titre, le chapô et la légende sont du vrai HTML **hors** de l'iframe.
+  Ce qui se trouve dans une iframe n'est pas attribué à la page hôte : sans ce
+  texte, l'article n'aurait rien à faire indexer.
+- L'iframe porte un `title` explicite (accessibilité et lecteurs d'écran),
+  `loading="lazy"`, et une hauteur initiale qui réserve la place du tableau
+  pour éviter que le contenu suivant ne saute au chargement.
+- Un repli `<noscript>` renvoie vers la page du widget.
+
+Le widget mesure sa propre hauteur et l'envoie à la page hôte par `postMessage` ;
+le script fourni ajuste le cadre. Sans cela le tableau serait tronqué ou
+enfermé dans une seconde barre de défilement. La page hôte ne retient que les
+messages provenant de l'origine du widget.
+
+Deux paramètres d'URL :
+
+| Paramètre | Effet |
+|---|---|
+| `?theme=light` | force l'apparence claire |
+| `?theme=dark` | force l'apparence sombre |
+| *(aucun)* | suit les préférences d'affichage du visiteur |
 
 ## Passage à la saison suivante
 
