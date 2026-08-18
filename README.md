@@ -21,7 +21,7 @@ node serve.js           # http://localhost:8777
 | `associations.json` | Les 55 associations : code UEFA, nom français, drapeau, `country_id` SportMonks |
 | `history.json` | Coefficients UEFA définitifs des quatre saisons closes |
 | `entrants-current.json` | Clubs entrant directement en phase de ligue, en attente du tirage |
-| `embed-wordpress.html` | Bloc d'integration a coller dans un article WordPress |
+| `embed-wordpress.html` + `-en` `-it` `-pt` | Blocs d'integration WordPress, un par langue |
 | `index-en.html`, `index-it.html`, `index-pt.html` | Variantes anglaise, italienne et portugais-bresilien, generees |
 | `build-langs.js` | Genere les variantes traduites depuis le master FR |
 | `serve.js` | Serveur statique local |
@@ -138,8 +138,10 @@ dans l'API. À rafraîchir une fois par an, en juillet.
 
 ## Intégration WordPress
 
-Le bloc prêt à coller se trouve dans [`embed-wordpress.html`](embed-wordpress.html) :
-un bloc « HTML personnalisé » suffit, sans plugin ni dépendance.
+Un bloc prêt à coller par langue : [`embed-wordpress.html`](embed-wordpress.html),
+[`-en`](embed-wordpress-en.html), [`-it`](embed-wordpress-it.html),
+[`-pt`](embed-wordpress-pt.html). Un bloc « HTML personnalisé » suffit, sans
+plugin ni dépendance.
 
 Ce qui est prévu pour le référencement :
 

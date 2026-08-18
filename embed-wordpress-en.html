@@ -1,0 +1,72 @@
+<!--
+  UEFA country coefficients: where each association stands — English
+  ----------------------------------------------------------------------
+  Paste into a Custom HTML block (Gutenberg) or the article's code editor.
+  No plugin, no dependency.
+
+  The text outside the iframe is deliberately real HTML: iframe content is not
+  attributed to the page that displays it, so the article must carry enough of
+  its own to be understood and indexed.
+
+  ?theme=light forces the light appearance; drop it to follow the visitor's
+  system preference, or use ?theme=dark on a dark article.
+-->
+
+<section class="uefa-ranking">
+  <h2>UEFA country coefficients: where each association stands</h2>
+
+  <p>
+    An association's coefficient is the average number of points won by its clubs
+    in the Champions League, Europa League and Conference League over the past five
+    seasons. It sets how many European places each country receives. England lead the
+    2027 ranking ahead of Italy and Spain, with France fifth.
+  </p>
+
+  <figure class="uefa-ranking__embed">
+    <iframe
+      id="uefa-ranking-frame"
+      src="https://jcrochet-netizen.github.io/ranking-uefa-pays/index-en.html?theme=light"
+      title="UEFA country coefficients 2027: each association's five-season total"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      scrolling="no"
+      style="display:block;width:100%;height:2600px;border:0;overflow:hidden"></iframe>
+
+    <figcaption>
+      UEFA country coefficients, 2022-23 to 2026-27. This ranking sets the entry
+      quotas for 2028-29. SportMonks data, updated automatically.
+    </figcaption>
+  </figure>
+
+  <noscript>
+    <p>
+      <a href="https://jcrochet-netizen.github.io/ranking-uefa-pays/index-en.html" target="_blank" rel="noopener">View the UEFA country coefficients</a>
+      (the interactive table requires JavaScript).
+    </p>
+  </noscript>
+</section>
+
+<style>
+.uefa-ranking__embed { margin: 1.5rem 0; }
+.uefa-ranking__embed figcaption {
+  margin-top: .6rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+</style>
+
+<script>
+(function () {
+  var ORIGIN = "https://jcrochet-netizen.github.io";
+  window.addEventListener("message", function (event) {
+    if (event.origin !== ORIGIN) return;
+    var data = event.data;
+    if (!data || data.type !== "uefa-ranking:height") return;
+    var height = parseInt(data.height, 10);
+    if (!height || height < 200 || height > 20000) return;
+    var frame = document.getElementById("uefa-ranking-frame");
+    if (frame) frame.style.height = height + "px";
+  });
+})();
+</script>

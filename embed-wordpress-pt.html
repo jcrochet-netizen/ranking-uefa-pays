@@ -1,0 +1,72 @@
+<!--
+  Ranking da UEFA por país: o coeficiente de cada federação — Português (BR)
+  ----------------------------------------------------------------------
+  Cole em um bloco « HTML personalizado » (Gutenberg) ou no editor de codigo
+  do artigo. Sem plugin, sem dependencia.
+
+  O texto fora do iframe e propositalmente HTML real: o que esta dentro de um
+  iframe nao e atribuido a pagina que o exibe, entao o artigo precisa carregar
+  por si so o necessario para ser compreendido e indexado.
+
+  ?theme=light forces the light appearance; drop it to follow the visitor's
+  system preference, or use ?theme=dark on a dark article.
+-->
+
+<section class="uefa-ranking">
+  <h2>Ranking da UEFA por país: o coeficiente de cada federação</h2>
+
+  <p>
+    O coeficiente de uma federação é a média de pontos conquistados por seus clubes
+    na Champions League, na Europa League e na Conference League nas últimas cinco
+    temporadas. Ele define o número de vagas europeias de cada país. A Inglaterra lidera o
+    ranking de 2027 à frente de Itália e Espanha, com a França em quinto.
+  </p>
+
+  <figure class="uefa-ranking__embed">
+    <iframe
+      id="uefa-ranking-frame"
+      src="https://jcrochet-netizen.github.io/ranking-uefa-pays/index-pt.html?theme=light"
+      title="Ranking da UEFA por país 2027: o coeficiente de cada federação em cinco temporadas"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      scrolling="no"
+      style="display:block;width:100%;height:2600px;border:0;overflow:hidden"></iframe>
+
+    <figcaption>
+      Ranking da UEFA por país, temporadas 2022-23 a 2026-27. Define as vagas da
+      temporada 2028-29. Dados SportMonks, atualizados automaticamente.
+    </figcaption>
+  </figure>
+
+  <noscript>
+    <p>
+      <a href="https://jcrochet-netizen.github.io/ranking-uefa-pays/index-pt.html" target="_blank" rel="noopener">Ver o ranking da UEFA por país</a>
+      (a tabela interativa requer JavaScript).
+    </p>
+  </noscript>
+</section>
+
+<style>
+.uefa-ranking__embed { margin: 1.5rem 0; }
+.uefa-ranking__embed figcaption {
+  margin-top: .6rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+</style>
+
+<script>
+(function () {
+  var ORIGIN = "https://jcrochet-netizen.github.io";
+  window.addEventListener("message", function (event) {
+    if (event.origin !== ORIGIN) return;
+    var data = event.data;
+    if (!data || data.type !== "uefa-ranking:height") return;
+    var height = parseInt(data.height, 10);
+    if (!height || height < 200 || height > 20000) return;
+    var frame = document.getElementById("uefa-ranking-frame");
+    if (frame) frame.style.height = height + "px";
+  });
+})();
+</script>
