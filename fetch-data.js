@@ -521,7 +521,7 @@ function aggregate(clubs) {
   rows.forEach((r, i) => (r.rank = i + 1));
 
   const payload = {
-    updated: new Date().toISOString(),
+    updated: null,
     rankingYear: RANKING_YEAR,
     allocationSeason: `${RANKING_YEAR + 1}/${String(RANKING_YEAR + 2).slice(2)}`,
     seasons: SEASON_LABELS,
@@ -530,9 +530,26 @@ function aggregate(clubs) {
     rows,
   };
 
+  // `updated` date la donnée, pas l'exécution : si rien n'a bougé, on conserve
+  // l'horodatage précédent. Sans cela le fichier différerait à chaque passage
+  // et le rafraîchissement automatique produirait un commit toutes les six
+  // heures — et autant de redéploiements — pour une seule ligne d'horodatage.
   const outPath = path.join(__dirname, "ranking.json");
+  let previous = null;
+  try {
+    previous = JSON.parse(fs.readFileSync(outPath, "utf8"));
+  } catch {
+    /* premier passage */
+  }
+  const sameData = previous && JSON.stringify({ ...previous, updated: null }) === JSON.stringify(payload);
+  payload.updated = sameData ? previous.updated : new Date().toISOString();
+
   fs.writeFileSync(outPath, JSON.stringify(payload, null, 1));
-  console.log(`\n✓ ranking.json écrit (${rows.length} associations)`);
+  console.log(
+    sameData
+      ? `\n✓ ranking.json inchangé (données identiques, horodatage conservé)`
+      : `\n✓ ranking.json mis à jour (${rows.length} associations)`
+  );
   console.log("\nTop 10 :");
   for (const r of rows.slice(0, 10)) {
     console.log(
