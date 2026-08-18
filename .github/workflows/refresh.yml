@@ -1,0 +1,44 @@
+name: Refresh classement UEFA
+
+# Régénère ranking.json depuis SportMonks et le commit s'il a changé.
+# Le widget (index.html) lit ranking.json côté client.
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # 4 fois par jour — le classement bouge par soirées de matches
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-ranking
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch ranking
+        env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS_API_TOKEN }}
+        run: node fetch-data.js
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- ranking.json; then
+            echo "Aucun changement — rien à commit."
+          else
+            git add ranking.json
+            git commit -m "Refresh classement UEFA"
+            git push
+          fi
