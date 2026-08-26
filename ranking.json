@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-21T02:00:07.704Z",
+ "updated": "2026-08-26T02:00:53.757Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -739,7 +739,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/14/494.png",
      "comp": "UCL",
      "pts": 1.5,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 1.5,
      "bonus": 0
@@ -1138,12 +1138,22 @@
     "2023/24": 8,
     "2024/25": 11.812,
     "2025/26": 8.05,
-    "2026/27": 1.8
+    "2026/27": 2
    },
-   "total": 35.412,
+   "total": 35.612,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
+    {
+     "name": "Bodø / Glimt",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/1668.png",
+     "comp": "UCL",
+     "pts": 3.5,
+     "played": 4,
+     "alive": true,
+     "matchPts": 3.5,
+     "bonus": 0
+    },
     {
      "name": "Brann",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/10/2474.png",
@@ -1160,16 +1170,6 @@
      "comp": "UEL+UECL",
      "pts": 2.5,
      "played": 5,
-     "alive": true,
-     "matchPts": 2.5,
-     "bonus": 0
-    },
-    {
-     "name": "Bodø / Glimt",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/1668.png",
-     "comp": "UCL",
-     "pts": 2.5,
-     "played": 3,
      "alive": true,
      "matchPts": 2.5,
      "bonus": 0
@@ -1459,7 +1459,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/21/53.png",
      "comp": "UCL",
      "pts": 1,
-     "played": 1,
+     "played": 2,
      "alive": true,
      "matchPts": 1,
      "bonus": 0
@@ -1483,9 +1483,9 @@
     "2023/24": 4.8,
     "2024/25": 9.65,
     "2025/26": 4.1,
-    "2026/27": 2.4
+    "2026/27": 2.6
    },
-   "total": 25.85,
+   "total": 26.05,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -1533,10 +1533,10 @@
      "name": "LASK Linz",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/9/3369.png",
      "comp": "UCL",
-     "pts": 0,
-     "played": 1,
+     "pts": 1,
+     "played": 2,
      "alive": true,
-     "matchPts": 0,
+     "matchPts": 1,
      "bonus": 0
     }
    ],
@@ -1829,7 +1829,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/516.png",
      "comp": "UCL",
      "pts": 4,
-     "played": 5,
+     "played": 6,
      "alive": true,
      "matchPts": 4,
      "bonus": 0
@@ -1948,9 +1948,9 @@
     "2023/24": 5.875,
     "2024/25": 2.875,
     "2025/26": 5.812,
-    "2026/27": 3.375
+    "2026/27": 3.625
    },
-   "total": 21.937,
+   "total": 22.187,
    "clubs": 4,
    "clubsAlive": 2,
    "detail": [
@@ -1958,10 +1958,10 @@
      "name": "Sabah",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/25/138649.png",
      "comp": "UCL",
-     "pts": 5,
-     "played": 7,
+     "pts": 6,
+     "played": 8,
      "alive": true,
-     "matchPts": 5,
+     "matchPts": 6,
      "bonus": 0
     },
     {
