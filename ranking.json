@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T20:05:47.522Z",
+ "updated": "2026-08-27T09:55:33.057Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -484,7 +484,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/15/79.png",
      "comp": "UCL",
      "pts": 1.5,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 1.5,
      "bonus": 0
@@ -773,9 +773,9 @@
     "2023/24": 12,
     "2024/25": 10.3,
     "2025/26": 11.075,
-    "2026/27": 3.1
+    "2026/27": 3.3
    },
-   "total": 48.275,
+   "total": 48.475,
    "clubs": 5,
    "clubsAlive": 4,
    "detail": [
@@ -790,6 +790,16 @@
      "bonus": 6
     },
     {
+     "name": "Fenerbahçe",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/24/88.png",
+     "comp": "UCL",
+     "pts": 5,
+     "played": 6,
+     "alive": true,
+     "matchPts": 5,
+     "bonus": 0
+    },
+    {
      "name": "Beşiktaş",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/10/554.png",
      "comp": "UEL",
@@ -797,16 +807,6 @@
      "played": 5,
      "alive": true,
      "matchPts": 5,
-     "bonus": 0
-    },
-    {
-     "name": "Fenerbahçe",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/24/88.png",
-     "comp": "UCL",
-     "pts": 4,
-     "played": 5,
-     "alive": true,
-     "matchPts": 4,
      "bonus": 0
     },
     {
@@ -998,9 +998,9 @@
     "2023/24": 11.4,
     "2024/25": 12.687,
     "2025/26": 14.2,
-    "2026/27": 1.6
+    "2026/27": 1.8
    },
-   "total": 42.012,
+   "total": 42.212,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -1025,6 +1025,16 @@
      "bonus": 0
     },
     {
+     "name": "AEK Athens",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/13/781.png",
+     "comp": "UCL",
+     "pts": 1.5,
+     "played": 2,
+     "alive": true,
+     "matchPts": 1.5,
+     "bonus": 0
+    },
+    {
      "name": "OFI",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/118.png",
      "comp": "UEL",
@@ -1040,16 +1050,6 @@
      "comp": "UCL",
      "pts": 0.5,
      "played": 2,
-     "alive": true,
-     "matchPts": 0.5,
-     "bonus": 0
-    },
-    {
-     "name": "AEK Athens",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/13/781.png",
-     "comp": "UCL",
-     "pts": 0.5,
-     "played": 1,
      "alive": true,
      "matchPts": 0.5,
      "bonus": 0
@@ -1138,9 +1138,9 @@
     "2023/24": 8,
     "2024/25": 11.812,
     "2025/26": 8.05,
-    "2026/27": 2
+    "2026/27": 2.2
    },
-   "total": 35.612,
+   "total": 35.812,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -1178,10 +1178,10 @@
      "name": "Viking",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/1/321.png",
      "comp": "UCL",
-     "pts": 0.5,
-     "played": 1,
+     "pts": 1.5,
+     "played": 2,
      "alive": true,
-     "matchPts": 0.5,
+     "matchPts": 1.5,
      "bonus": 0
     },
     {
@@ -1644,7 +1644,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/2/674.png",
      "comp": "UCL",
      "pts": 4,
-     "played": 5,
+     "played": 6,
      "alive": true,
      "matchPts": 4,
      "bonus": 0
@@ -1894,7 +1894,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/26/1114.png",
      "comp": "UCL",
      "pts": 2.5,
-     "played": 5,
+     "played": 6,
      "alive": true,
      "matchPts": 2.5,
      "bonus": 0
@@ -2013,9 +2013,9 @@
     "2023/24": 5,
     "2024/25": 4.625,
     "2025/26": 2.625,
-    "2026/27": 2.375
+    "2026/27": 2.625
    },
-   "total": 20.625,
+   "total": 20.875,
    "clubs": 4,
    "clubsAlive": 1,
    "detail": [
@@ -2023,10 +2023,10 @@
      "name": "Slovan Bratislava",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/17/2417.png",
      "comp": "UCL",
-     "pts": 4,
-     "played": 5,
+     "pts": 5,
+     "played": 6,
      "alive": true,
-     "matchPts": 4,
+     "matchPts": 5,
      "bonus": 0
     },
     {
@@ -2089,7 +2089,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/3223.png",
      "comp": "UCL",
      "pts": 5.5,
-     "played": 7,
+     "played": 8,
      "alive": true,
      "matchPts": 5.5,
      "bonus": 0
