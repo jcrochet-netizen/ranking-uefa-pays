@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T22:18:35.612Z",
+ "updated": "2026-08-28T22:25:20.167Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -348,15 +348,25 @@
     "2023/24": 19.357,
     "2024/25": 18.421,
     "2025/26": 21.785,
-    "2026/27": 3.333
+    "2026/27": 3.714
    },
-   "total": 80.021,
-   "clubs": 6,
-   "clubsAlive": 6,
+   "total": 80.402,
+   "clubs": 7,
+   "clubsAlive": 7,
    "detail": [
     {
      "name": "Borussia Dortmund",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/68.png",
+     "comp": "UCL",
+     "pts": 6,
+     "played": 0,
+     "alive": true,
+     "matchPts": 0,
+     "bonus": 6
+    },
+    {
+     "name": "VfB Stuttgart",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/3319.png",
      "comp": "UCL",
      "pts": 6,
      "played": 0,
