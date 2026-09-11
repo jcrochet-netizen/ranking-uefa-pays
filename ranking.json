@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10T20:55:03.793Z",
+ "updated": "2026-09-11T04:46:51.800Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -148,12 +148,22 @@
     "2023/24": 21,
     "2024/25": 21.875,
     "2025/26": 19,
-    "2026/27": 3.785
+    "2026/27": 4.071
    },
-   "total": 88.017,
+   "total": 88.303,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
+    {
+     "name": "Como",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/268.png",
+     "comp": "UCL",
+     "pts": 8,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 6
+    },
     {
      "name": "Roma",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/5/37.png",
@@ -180,16 +190,6 @@
      "comp": "UCL",
      "pts": 6,
      "played": 1,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 6
-    },
-    {
-     "name": "Como",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/268.png",
-     "comp": "UCL",
-     "pts": 6,
-     "played": 0,
      "alive": true,
      "matchPts": 0,
      "bonus": 6
@@ -348,9 +348,9 @@
     "2023/24": 19.357,
     "2024/25": 18.421,
     "2025/26": 21.785,
-    "2026/27": 4.285
+    "2026/27": 4.571
    },
-   "total": 80.973,
+   "total": 81.259,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
@@ -375,21 +375,21 @@
      "bonus": 6
     },
     {
+     "name": "FC Bayern München",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/503.png",
+     "comp": "UCL",
+     "pts": 8,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 6
+    },
+    {
      "name": "RB Leipzig",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/21/277.png",
      "comp": "UCL",
      "pts": 6,
-     "played": 0,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 6
-    },
-    {
-     "name": "FC Bayern München",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/503.png",
-     "comp": "UCL",
-     "pts": 6,
-     "played": 0,
+     "played": 1,
      "alive": true,
      "matchPts": 0,
      "bonus": 6
@@ -443,12 +443,22 @@
     "2023/24": 16.25,
     "2024/25": 17.928,
     "2025/26": 18.321,
-    "2026/27": 3.357
+    "2026/27": 3.642
    },
-   "total": 68.439,
+   "total": 68.724,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
+    {
+     "name": "Lens",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/15/271.png",
+     "comp": "UCL",
+     "pts": 8,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 6
+    },
     {
      "name": "Paris Saint Germain",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/15/591.png",
@@ -465,16 +475,6 @@
      "comp": "UCL",
      "pts": 6,
      "played": 1,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 6
-    },
-    {
-     "name": "Lens",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/15/271.png",
-     "comp": "UCL",
-     "pts": 6,
-     "played": 0,
      "alive": true,
      "matchPts": 0,
      "bonus": 6
@@ -934,7 +934,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/24/216.png",
      "comp": "UCL",
      "pts": 6,
-     "played": 0,
+     "played": 1,
      "alive": true,
      "matchPts": 0,
      "bonus": 6
@@ -1084,7 +1084,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/1668.png",
      "comp": "UCL",
      "pts": 9.5,
-     "played": 4,
+     "played": 5,
      "alive": true,
      "matchPts": 3.5,
      "bonus": 6
