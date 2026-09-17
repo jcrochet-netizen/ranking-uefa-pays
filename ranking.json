@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-16T21:22:12.194Z",
+ "updated": "2026-09-17T21:26:49.203Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -33,9 +33,9 @@
     "2023/24": 17.375,
     "2024/25": 29.464,
     "2025/26": 28.68,
-    "2026/27": 4.833
+    "2026/27": 5.277
    },
-   "total": 103.352,
+   "total": 103.796,
    "clubs": 9,
    "clubsAlive": 9,
    "detail": [
@@ -90,6 +90,26 @@
      "bonus": 6
     },
     {
+     "name": "Crystal Palace",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/51.png",
+     "comp": "UEL",
+     "pts": 2,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 0
+    },
+    {
+     "name": "AFC Bournemouth",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/20/52.png",
+     "comp": "UEL",
+     "pts": 2,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 0
+    },
+    {
      "name": "Sunderland",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/3/3.png",
      "comp": "UEL",
@@ -107,26 +127,6 @@
      "played": 2,
      "alive": true,
      "matchPts": 1.5,
-     "bonus": 0
-    },
-    {
-     "name": "Crystal Palace",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/51.png",
-     "comp": "UEL",
-     "pts": 0,
-     "played": 0,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 0
-    },
-    {
-     "name": "AFC Bournemouth",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/20/52.png",
-     "comp": "UEL",
-     "pts": 0,
-     "played": 0,
-     "alive": true,
-     "matchPts": 0,
      "bonus": 0
     }
    ],
@@ -148,9 +148,9 @@
     "2023/24": 21,
     "2024/25": 21.875,
     "2025/26": 19,
-    "2026/27": 4.071
+    "2026/27": 4.357
    },
-   "total": 88.303,
+   "total": 88.589,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
@@ -195,6 +195,16 @@
      "bonus": 6
     },
     {
+     "name": "Juventus",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/17/625.png",
+     "comp": "UEL",
+     "pts": 2,
+     "played": 1,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 0
+    },
+    {
      "name": "Atalanta",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/708.png",
      "comp": "UECL",
@@ -210,16 +220,6 @@
      "comp": "UEL",
      "pts": 0,
      "played": 1,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 0
-    },
-    {
-     "name": "Juventus",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/17/625.png",
-     "comp": "UEL",
-     "pts": 0,
-     "played": 0,
      "alive": true,
      "matchPts": 0,
      "bonus": 0
@@ -324,7 +324,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/18/594.png",
      "comp": "UEL",
      "pts": 0,
-     "played": 0,
+     "played": 1,
      "alive": true,
      "matchPts": 0,
      "bonus": 0
@@ -419,7 +419,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/6/2726.png",
      "comp": "UEL",
      "pts": 0,
-     "played": 0,
+     "played": 1,
      "alive": true,
      "matchPts": 0,
      "bonus": 0
@@ -514,7 +514,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/44.png",
      "comp": "UEL",
      "pts": 0,
-     "played": 0,
+     "played": 1,
      "alive": true,
      "matchPts": 0,
      "bonus": 0
@@ -538,9 +538,9 @@
     "2023/24": 11,
     "2024/25": 16.25,
     "2025/26": 20.5,
-    "2026/27": 5.1
+    "2026/27": 5.5
    },
-   "total": 65.35,
+   "total": 65.75,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -588,10 +588,10 @@
      "name": "Torreense",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/27/7067.png",
      "comp": "UEL",
-     "pts": 0,
-     "played": 0,
+     "pts": 2,
+     "played": 1,
      "alive": true,
-     "matchPts": 0,
+     "matchPts": 2,
      "bonus": 0
     }
    ],
@@ -613,9 +613,9 @@
     "2023/24": 14.4,
     "2024/25": 15.65,
     "2025/26": 11.4,
-    "2026/27": 3.4
+    "2026/27": 3.8
    },
-   "total": 59.05,
+   "total": 59.45,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -650,6 +650,16 @@
      "bonus": 0
     },
     {
+     "name": "Union Saint-Gilloise",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/3958.png",
+     "comp": "UCL+UEL",
+     "pts": 2.5,
+     "played": 3,
+     "alive": true,
+     "matchPts": 2.5,
+     "bonus": 0
+    },
+    {
      "name": "Sint-Truiden",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/3/355.png",
      "comp": "UEL+UECL",
@@ -657,16 +667,6 @@
      "played": 2,
      "alive": true,
      "matchPts": 1,
-     "bonus": 0
-    },
-    {
-     "name": "Union Saint-Gilloise",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/3958.png",
-     "comp": "UCL+UEL",
-     "pts": 0.5,
-     "played": 2,
-     "alive": true,
-     "matchPts": 0.5,
      "bonus": 0
     }
    ],
@@ -739,7 +739,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/14/494.png",
      "comp": "UCL+UEL",
      "pts": 1.5,
-     "played": 4,
+     "played": 5,
      "alive": true,
      "matchPts": 1.5,
      "bonus": 0
@@ -773,9 +773,9 @@
     "2023/24": 12,
     "2024/25": 10.3,
     "2025/26": 11.075,
-    "2026/27": 4.7
+    "2026/27": 5.1
    },
-   "total": 49.875,
+   "total": 50.275,
    "clubs": 5,
    "clubsAlive": 4,
    "detail": [
@@ -790,6 +790,16 @@
      "bonus": 6
     },
     {
+     "name": "Beşiktaş",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/10/554.png",
+     "comp": "UEL",
+     "pts": 7,
+     "played": 7,
+     "alive": true,
+     "matchPts": 7,
+     "bonus": 0
+    },
+    {
      "name": "Galatasaray",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/2/34.png",
      "comp": "UCL",
@@ -798,16 +808,6 @@
      "alive": true,
      "matchPts": 0,
      "bonus": 6
-    },
-    {
-     "name": "Beşiktaş",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/10/554.png",
-     "comp": "UEL",
-     "pts": 5,
-     "played": 6,
-     "alive": true,
-     "matchPts": 5,
-     "bonus": 0
     },
     {
      "name": "İstanbul Başakşehir",
@@ -899,7 +899,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/25/3545.png",
      "comp": "UEL",
      "pts": 1,
-     "played": 2,
+     "played": 3,
      "alive": true,
      "matchPts": 1,
      "bonus": 0
@@ -934,7 +934,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/14/302.png",
      "comp": "UCL+UEL",
      "pts": 4.5,
-     "played": 6,
+     "played": 7,
      "alive": true,
      "matchPts": 4.5,
      "bonus": 0
@@ -998,9 +998,9 @@
     "2023/24": 11.4,
     "2024/25": 12.687,
     "2025/26": 14.2,
-    "2026/27": 4.2
+    "2026/27": 4.6
    },
-   "total": 44.612,
+   "total": 45.012,
    "clubs": 5,
    "clubsAlive": 4,
    "detail": [
@@ -1025,6 +1025,16 @@
      "bonus": 0
     },
     {
+     "name": "OFI",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/118.png",
+     "comp": "UEL",
+     "pts": 4,
+     "played": 3,
+     "alive": true,
+     "matchPts": 4,
+     "bonus": 0
+    },
+    {
      "name": "PAOK",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/9/649.png",
      "comp": "UEL+UECL",
@@ -1042,16 +1052,6 @@
      "played": 3,
      "alive": true,
      "matchPts": 2.5,
-     "bonus": 0
-    },
-    {
-     "name": "OFI",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/22/118.png",
-     "comp": "UEL",
-     "pts": 2,
-     "played": 2,
-     "alive": true,
-     "matchPts": 2,
      "bonus": 0
     }
    ],
@@ -1124,7 +1124,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/14/2510.png",
      "comp": "UEL",
      "pts": 1.5,
-     "played": 2,
+     "played": 3,
      "alive": true,
      "matchPts": 1.5,
      "bonus": 0
@@ -1343,9 +1343,9 @@
     "2023/24": 4.8,
     "2024/25": 9.65,
     "2025/26": 4.1,
-    "2026/27": 4.4
+    "2026/27": 4.8
    },
-   "total": 27.85,
+   "total": 28.25,
    "clubs": 5,
    "clubsAlive": 3,
    "detail": [
@@ -1358,6 +1358,16 @@
      "alive": true,
      "matchPts": 1,
      "bonus": 6
+    },
+    {
+     "name": "Salzburg",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/17/49.png",
+     "comp": "UEL",
+     "pts": 5.5,
+     "played": 5,
+     "alive": true,
+     "matchPts": 5.5,
+     "bonus": 0
     },
     {
      "name": "SK Rapid",
@@ -1376,16 +1386,6 @@
      "pts": 3.5,
      "played": 6,
      "alive": false,
-     "matchPts": 3.5,
-     "bonus": 0
-    },
-    {
-     "name": "Salzburg",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/17/49.png",
-     "comp": "UEL",
-     "pts": 3.5,
-     "played": 4,
-     "alive": true,
      "matchPts": 3.5,
      "bonus": 0
     },
@@ -1418,9 +1418,9 @@
     "2023/24": 4.5,
     "2024/25": 6.625,
     "2025/26": 7.437,
-    "2026/27": 2.875
+    "2026/27": 3.375
    },
-   "total": 27.312,
+   "total": 27.812,
    "clubs": 4,
    "clubsAlive": 1,
    "detail": [
@@ -1428,10 +1428,10 @@
      "name": "Ferencvárosi",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/16/112.png",
      "comp": "UEL",
-     "pts": 7,
-     "played": 8,
+     "pts": 9,
+     "played": 9,
      "alive": true,
-     "matchPts": 7,
+     "matchPts": 9,
      "bonus": 0
     },
     {
@@ -1534,7 +1534,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/21/53.png",
      "comp": "UCL+UEL",
      "pts": 1,
-     "played": 2,
+     "played": 3,
      "alive": true,
      "matchPts": 1,
      "bonus": 0
@@ -2089,7 +2089,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/3223.png",
      "comp": "UCL+UEL",
      "pts": 5.5,
-     "played": 8,
+     "played": 9,
      "alive": true,
      "matchPts": 5.5,
      "bonus": 0
