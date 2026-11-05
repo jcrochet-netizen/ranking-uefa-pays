@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:52:19.957Z",
+ "updated": "2026-11-05T06:55:54.801Z",
  "rankingYear": 2027,
  "allocationSeason": "2028/29",
  "seasons": [
@@ -33,15 +33,35 @@
     "2023/24": 17.375,
     "2024/25": 29.464,
     "2025/26": 28.68,
-    "2026/27": 8.166
+    "2026/27": 8.611
    },
-   "total": 106.685,
+   "total": 107.13,
    "clubs": 9,
    "clubsAlive": 9,
    "detail": [
     {
+     "name": "Arsenal",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/19.png",
+     "comp": "UCL",
+     "pts": 13,
+     "played": 4,
+     "alive": true,
+     "matchPts": 7,
+     "bonus": 6
+    },
+    {
      "name": "Liverpool",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/8/8.png",
+     "comp": "UCL",
+     "pts": 12,
+     "played": 4,
+     "alive": true,
+     "matchPts": 6,
+     "bonus": 6
+    },
+    {
+     "name": "Manchester City",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/9/9.png",
      "comp": "UCL",
      "pts": 12,
      "played": 4,
@@ -60,31 +80,11 @@
      "bonus": 6
     },
     {
-     "name": "Arsenal",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/19.png",
-     "comp": "UCL",
-     "pts": 11,
-     "played": 3,
-     "alive": true,
-     "matchPts": 5,
-     "bonus": 6
-    },
-    {
      "name": "Manchester United",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/14/14.png",
      "comp": "UCL",
      "pts": 10,
      "played": 4,
-     "alive": true,
-     "matchPts": 4,
-     "bonus": 6
-    },
-    {
-     "name": "Manchester City",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/9/9.png",
-     "comp": "UCL",
-     "pts": 10,
-     "played": 3,
      "alive": true,
      "matchPts": 4,
      "bonus": 6
@@ -148,28 +148,28 @@
     "2023/24": 21,
     "2024/25": 21.875,
     "2025/26": 19,
-    "2026/27": 6.785
+    "2026/27": 7.071
    },
-   "total": 91.017,
+   "total": 91.303,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
+    {
+     "name": "Como",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/268.png",
+     "comp": "UCL",
+     "pts": 12,
+     "played": 4,
+     "alive": true,
+     "matchPts": 6,
+     "bonus": 6
+    },
     {
      "name": "Inter",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/18/2930.png",
      "comp": "UCL",
      "pts": 10,
      "played": 4,
-     "alive": true,
-     "matchPts": 4,
-     "bonus": 6
-    },
-    {
-     "name": "Como",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/268.png",
-     "comp": "UCL",
-     "pts": 10,
-     "played": 3,
      "alive": true,
      "matchPts": 4,
      "bonus": 6
@@ -189,7 +189,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/21/597.png",
      "comp": "UCL",
      "pts": 8,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 2,
      "bonus": 6
@@ -260,8 +260,8 @@
      "bonus": 6
     },
     {
-     "name": "FC Barcelona",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/83.png",
+     "name": "Real Betis",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/5/485.png",
      "comp": "UCL",
      "pts": 12,
      "played": 4,
@@ -270,11 +270,11 @@
      "bonus": 6
     },
     {
-     "name": "Real Betis",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/5/485.png",
+     "name": "FC Barcelona",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/19/83.png",
      "comp": "UCL",
      "pts": 12,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 6,
      "bonus": 6
@@ -348,12 +348,22 @@
     "2023/24": 19.357,
     "2024/25": 18.421,
     "2025/26": 21.785,
-    "2026/27": 7.571
+    "2026/27": 7.857
    },
-   "total": 84.259,
+   "total": 84.545,
    "clubs": 7,
    "clubsAlive": 7,
    "detail": [
+    {
+     "name": "Borussia Dortmund",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/68.png",
+     "comp": "UCL",
+     "pts": 12,
+     "played": 4,
+     "alive": true,
+     "matchPts": 6,
+     "bonus": 6
+    },
     {
      "name": "FC Bayern München",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/23/503.png",
@@ -375,21 +385,11 @@
      "bonus": 6
     },
     {
-     "name": "Borussia Dortmund",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/4/68.png",
-     "comp": "UCL",
-     "pts": 10,
-     "played": 3,
-     "alive": true,
-     "matchPts": 4,
-     "bonus": 6
-    },
-    {
      "name": "RB Leipzig",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/21/277.png",
      "comp": "UCL",
      "pts": 8,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 2,
      "bonus": 6
@@ -464,7 +464,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/15/271.png",
      "comp": "UCL",
      "pts": 8,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 2,
      "bonus": 6
@@ -538,9 +538,9 @@
     "2023/24": 11,
     "2024/25": 16.25,
     "2025/26": 20.5,
-    "2026/27": 7.5
+    "2026/27": 7.9
    },
-   "total": 67.75,
+   "total": 68.15,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -565,6 +565,16 @@
      "bonus": 0
     },
     {
+     "name": "Porto",
+     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/652.png",
+     "comp": "UCL",
+     "pts": 8,
+     "played": 4,
+     "alive": true,
+     "matchPts": 2,
+     "bonus": 6
+    },
+    {
      "name": "Sporting Braga",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/20/884.png",
      "comp": "UECL",
@@ -573,16 +583,6 @@
      "alive": true,
      "matchPts": 7,
      "bonus": 0
-    },
-    {
-     "name": "Porto",
-     "logo": "https://cdn.sportmonks.com/images/soccer/teams/12/652.png",
-     "comp": "UCL",
-     "pts": 6,
-     "played": 3,
-     "alive": true,
-     "matchPts": 0,
-     "bonus": 6
     },
     {
      "name": "Torreense",
@@ -613,9 +613,9 @@
     "2023/24": 14.4,
     "2024/25": 15.65,
     "2025/26": 11.4,
-    "2026/27": 6.8
+    "2026/27": 7.2
    },
-   "total": 62.45,
+   "total": 62.85,
    "clubs": 5,
    "clubsAlive": 5,
    "detail": [
@@ -623,10 +623,10 @@
      "name": "Club Brugge",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/20/340.png",
      "comp": "UCL",
-     "pts": 10,
-     "played": 3,
+     "pts": 12,
+     "played": 4,
      "alive": true,
-     "matchPts": 4,
+     "matchPts": 6,
      "bonus": 6
     },
     {
@@ -699,7 +699,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/10/682.png",
      "comp": "UCL",
      "pts": 9,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 3,
      "bonus": 6
@@ -934,7 +934,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/24/216.png",
      "comp": "UCL",
      "pts": 7,
-     "played": 3,
+     "played": 4,
      "alive": true,
      "matchPts": 1,
      "bonus": 6
@@ -1073,9 +1073,9 @@
     "2023/24": 8,
     "2024/25": 11.812,
     "2025/26": 8.05,
-    "2026/27": 6.8
+    "2026/27": 7.2
    },
-   "total": 40.412,
+   "total": 40.812,
    "clubs": 5,
    "clubsAlive": 4,
    "detail": [
@@ -1093,10 +1093,10 @@
      "name": "Viking",
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/1/321.png",
      "comp": "UCL",
-     "pts": 8.5,
-     "played": 5,
+     "pts": 10.5,
+     "played": 6,
      "alive": true,
-     "matchPts": 2.5,
+     "matchPts": 4.5,
      "bonus": 6
     },
     {
@@ -1829,7 +1829,7 @@
      "logo": "https://cdn.sportmonks.com/images/soccer/teams/25/138649.png",
      "comp": "UCL",
      "pts": 14,
-     "played": 11,
+     "played": 12,
      "alive": true,
      "matchPts": 8,
      "bonus": 6
